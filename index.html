@@ -19,7 +19,7 @@ p {
 
 .row {
   width: 100%;
-  overflow: hidden; /* Ensures no float overflow */
+  overflow: hidden; /* Clear floats */
 }
 
 .col {
@@ -34,7 +34,7 @@ p {
 
 @media (max-width: 992px) {
   .col-lg-3 {
-    width: 33.33%; /* 3 items in a row for medium screens */
+    width: 33.33%; /* 3 items per row on medium screens */
   }
 }
 
@@ -46,13 +46,13 @@ p {
 
 @media (max-width: 576px) {
   .col-lg-3, .col-md-4, .col-sm-6 {
-    width: 100%; /* Stack vertically on very small screens */
+    width: 100%; /* 1 item per row on very small screens */
   }
 }
 </style>
 </head>
 <body>
-<h1>The Boxes are Square 2</h1>
+<h1>The Boxes are Square 1</h1>
 
 <div class="row">
   <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>RETARD 1</p></div>
@@ -61,3 +61,4 @@ p {
 </div>
 
 </body>
+</html>
