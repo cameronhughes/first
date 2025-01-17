@@ -1,65 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Responsive Layout</title>
-<style>
-* { box-sizing: border-box; }
-h1 { margin-bottom: 15px; }
-p {
-  border: 1px solid black;
-  background-color: #A52A2A;
-  height: 150px;
-  font-family: Helvetica;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    /* Reset and box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.row {
-  width: 100%;
-  overflow: hidden; /* Ensure no overflow */
-}
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
 
-.col {
-  float: left;
-  padding: 10px;
-  margin-bottom: 10px; /* To prevent touching columns in row */
-}
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-.col-lg-3 { width: 25%; } /* 4 items per row on large screens */
-.col-md-6 { width: 50%; } /* 2 items per row on medium screens */
-.col-sm-12 { width: 100%; } /* 1 item per row on small screens */
+    .container {
+      width: 100%;
+    }
 
-@media (max-width: 992px) {
-  .col-lg-3 {
-    width: 50%; /* 2 items per row for medium screens */
-  }
-}
+    .section {
+      border: 1px solid black;
+      padding: 20px;
+      margin: 10px 0;
+      background-color: #f0f0f0;
+      position: relative;
+    }
 
-@media (max-width: 768px) {
-  .col-lg-3, .col-md-6 {
-    width: 100%; /* 1 item per row for smaller screens */
-  }
-}
+    .section-title {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ccc;
+      padding: 5px 10px;
+      border: 1px solid black;
+    }
 
-@media (max-width: 576px) {
-  .col-lg-3, .col-md-6, .col-sm-12 {
-    width: 100%; /* 1 item per row for very small screens */
-  }
-}
-</style>
+    /* Desktop view (992px and above) */
+    @media (min-width: 992px) {
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .section {
+        width: 32%;
+        margin: 0;
+      }
+    }
+
+    /* Tablet view (768px to 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .section {
+        width: 48%;
+        margin: 1%;
+      }
+
+      .section:nth-child(3) {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+    /* Mobile view (767px and below) */
+    @media (max-width: 767px) {
+      .section {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1>The Boxes are Square 2</h1>
-
-<div class="row">
-  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 1</p></div>
-  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 2</p></div>
-  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 3</p></div>
-  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 4</p></div>
-</div>
-
+  <h1>Responsive Layout</h1>
+  <div class="container">
+    <div class="section">
+      <div class="section-title">Chicken</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit nulla id massa tempus viverra.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Beef</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit nulla id massa tempus viverra.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Sushi</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit nulla id massa tempus viverra.</p>
+    </div>
+  </div>
 </body>
 </html>
+
