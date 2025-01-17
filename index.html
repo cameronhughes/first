@@ -28,10 +28,9 @@ p {
   margin-bottom: 10px; /* To prevent touching columns in row */
 }
 
-.col-lg-3 { width: 25%; }
-.col-md-4 { width: 33.33%; }
-.col-sm-6 { width: 50%; }
-.col-xs-12 { width: 100%; }
+.col-lg-3 { width: 25%; } /* 4 items per row on large screens */
+.col-md-6 { width: 50%; } /* 2 items per row on medium screens */
+.col-sm-12 { width: 100%; } /* 1 item per row on small screens */
 
 @media (max-width: 992px) {
   .col-lg-3 {
@@ -40,26 +39,26 @@ p {
 }
 
 @media (max-width: 768px) {
-  .col-lg-3, .col-md-4 {
+  .col-lg-3, .col-md-6 {
     width: 100%; /* 1 item per row for smaller screens */
   }
 }
 
 @media (max-width: 576px) {
-  .col-lg-3, .col-md-4, .col-sm-6 {
+  .col-lg-3, .col-md-6, .col-sm-12 {
     width: 100%; /* 1 item per row for very small screens */
   }
 }
 </style>
 </head>
 <body>
-<h1>The Boxes are Square 1</h1>
+<h1>The Boxes are Square 2</h1>
 
 <div class="row">
-  <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>RETARD 1</p></div>
-  <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>RETARD 2</p></div>
-  <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>RETARD 3</p></div>
-  <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>RETARD 4</p></div>
+  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 1</p></div>
+  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 2</p></div>
+  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 3</p></div>
+  <div class="col col-lg-3 col-md-6 col-sm-12"><p>RETARD 4</p></div>
 </div>
 
 </body>
