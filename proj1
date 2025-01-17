@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title> the title of the website </title>
+<style>
+p {
+color: red;
+font-size: 25px;
+width: 200px;
+}
+</style>
+
+
+
